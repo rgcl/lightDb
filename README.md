@@ -103,7 +103,7 @@ Retrive a collection or create a new collection.
 **Parameters:**
 * collectionName {string}: The name for the collection use as constant and unique for each collection.
 
-**Return:** {lightDb.Persistent|lightDb.Volatile} a collection instante
+**Return:** {lightDb.Persistent|lightDb.Volatile} a collection instante, this is lightDb.Persistent if localStorage is supported, else lightDb.Volatile for memory collection. 
 
 ###lightDb.remove(/* string */ collectionName)
 drop the collection.
