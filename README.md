@@ -58,7 +58,7 @@ require(['lightDb'], function(lightDb) {
 ```
 
 ## Usage 
-lightDb is a NOSQL database for the web that use the localStorage for simple and light collections 
+lightDb is a NO-SQL database for the web that use the localStorage for simple and light collections 
 of persistent data on the client-side.
 
 In this example, we have a collection of monsters:
@@ -99,20 +99,23 @@ require(['lightDb'], function(lightDb) {
 
 ###lightDb.get(/* string */ collectionName)
 Retrive a collection or create a new collection.
+
 **Parameters:**
 * collectionName {string}: The name for the collection use as constant and unique for each collection.
-**Return:**
-{lightDb.Persistent|lightDb.Volatile} a collection instante
+
+**Return:** {lightDb.Persistent|lightDb.Volatile} a collection instante
 
 ###lightDb.remove(/* string */ collectionName)
 drop the collection.
+
 **Parameters:**
 * collectionName {string}: The name for the collection use as constant and unique for each collection.
-**Return:**
-{undefined}
+
+**Return:** {undefined}
 
 ###lightDb.setJsonUtil(/* object */ JSON)
 set the JSON utility used for serialize the data.
+
 **Example**
 ```
 require(['lightDb', 'dojo/json'], function(lightDb, JSON) {
@@ -120,39 +123,44 @@ require(['lightDb', 'dojo/json'], function(lightDb, JSON) {
 	lightDb.setJsonUtil(JSON);	
 });
 ```
+
 **Parameters:**
 * JSON {object}: A object that have the parse and stringify method.
-**Return:**
-{undefined}
+
+**Return:** {undefined}
 
 ###{lightDb.Persistent|lightDb.Volatile}.get(/* string */ key)
 Retrive the data stored in the collection and associated with that key.
+
 **Parameters:**
 * key {string}: The identifier of that data use as constant and unique for each data of its collection.
-**Return:**
-{object} the data
+
+**Return:** {object} the data
 
 ###{lightDb.Persistent|lightDb.Volatile}.set(/* string */ key, /* object */ data)
 Set a data stored in the collection.
+
 **Parameters:**
 * key {string}: The identifier of that data use as constant and unique for each data of its collection.
 * data {object} : The data, an object that can be parsed by JSON.parse
-**Return:**
-{undefined}       
+
+**Return:** {undefined}       
 
 ###{lightDb.Persistent|lightDb.Volatile}.remove(/* string */ key)
 Remove a data stored in the collection.
+
 **Parameters:**
 * key {string}: The identifier of that data use as constant and unique for each data of its collection.
-**Return:**
-{undefined}                           
+
+**Return:** {undefined}                           
 
 ###{lightDb.Persistent|lightDb.Volatile}.forEach(/* function */ iterator)
 Utility for iterar for each data stored in the collection
+
 **Parameters:**
 * iterator {function}: Method passes each item. It takes two parameters, the first is the data and the second is the key
-**Return:**
-{undefined}
+
+**Return:** {undefined}
 
 ## TODO
 

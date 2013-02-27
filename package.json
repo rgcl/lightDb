@@ -1,0 +1,17 @@
+{
+	"name": "lightDb",
+	"author": "Rodrigo González | SapienLab",
+	"description": "lightDb is a NO-SQL database for the web that use the localStorage for simple and light collections of persistent data on the client-side.",
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://opensource.org/licenses/MIT"
+		}
+	],
+	"repository": {
+		"type": "git",
+		"url": "http://github.com/sapienlab/lightDb"
+	},
+	"main": "./lightDb",
+	"dojoBuild": "package.js"
+}
