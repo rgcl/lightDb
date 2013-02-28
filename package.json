@@ -12,6 +12,6 @@
 		"type": "git",
 		"url": "http://github.com/sapienlab/lightDb"
 	},
-	"main": "./lightDb",
+	"main": "./main",
 	"dojoBuild": "package.js"
 }

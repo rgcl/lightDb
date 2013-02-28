@@ -30,9 +30,9 @@ lightDb := Light_response(Question_1, Quiestion_2)
 
 ## Installation
 
-A simple installation consists of copying and pasting the content of lightDb.js file:
+A simple installation consists of copying and pasting the content of lightDb/main.js file:
 ```html
-<script src="lightDb.js"></script>
+<script src="lightDb/main.js"></script>
 ```
 This create a global variable called lightDb:
 
