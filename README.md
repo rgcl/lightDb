@@ -7,19 +7,23 @@ A simple wrapper for the HTML5 localStorage.
 ### Question 1:
 What do if localStorage is not available?
 
-#### Huge response:
+** Huge response: **
+
 Make a complex model to retrieve and save data in a server-side or with a third party plugin, etc etc.
 
-#### Light response:
+** Light response: **
+
 IE7 is not worthy to my attention, so in that case use a volatile memory instead.
 
 ### Question 2:
 What if I need more than a storable object?
 
-#### Huge response:
+** Huge response: **
+
 Use IndexedDB with a complex wrapper and an alternative model for those browsers that not support IndexedDB... server-side or with a third party plugin, etc etc.
 
-#### Light response:
+** Light response: **
+
 Uff, why not use a simple localStorage with a prefix in each key? :)
 
 So,
@@ -48,7 +52,7 @@ You aslo can use the [cpm](https://github.com/kriszyp/cpm)
 cpm install lightDb
 ```
 
-Finally, the [RequireJs](https://github.com/jrburke/requirejs) style and AMD (example with [Dojo](https://github.com/dojo/dojo)) style aslo is supported.
+Finally, AMD style ([RequireJs](https://github.com/jrburke/requirejs), [Dojo](https://github.com/dojo/dojo)) aslo is supported.
 
 ```
 require(['lightDb'], function(lightDb) {
@@ -66,8 +70,8 @@ In this example, we have a collection of monsters:
 ```javascript
 require(['lightDb'], function(lightDb) {
 	
-	// create a 'Monsters' collection, or retrive if it exists
-	var monsters = lightDb.get('Monsters');
+	// create a 'monsters' collection, or retrive if it exists
+	var monsters = lightDb.get('monsters');
 	
 	// set a data
 	monsters.set('empanao', {
@@ -89,8 +93,11 @@ require(['lightDb'], function(lightDb) {
 		
 	});
 	
-	// drop the collection
-	lightDb.remove('Monsters');
+	// remove canela from monsters
+	monsters.remove('canela');
+	
+	// drop the 'monsters' collection
+	lightDb.remove('monsters');
 	
 });
 ```
@@ -152,7 +159,15 @@ Remove a data stored in the collection.
 **Parameters:**
 * key {string}: The identifier of that data use as constant and unique for each data of its collection.
 
-**Return:** {undefined}                           
+**Return:** {undefined}     
+
+###{lightDb.Persistent|lightDb.Volatile}.has(/* string */ key)
+This collection has that data?
+
+**Parameters:**
+* key {string}: The identifier of that data use as constant and unique for each data of its collection.
+
+**Return:** {boolean}                  
 
 ###{lightDb.Persistent|lightDb.Volatile}.forEach(/* function */ iterator)
 Utility for iterar for each data stored in the collection
