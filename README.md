@@ -7,22 +7,22 @@ A simple wrapper for the HTML5 localStorage.
 ### Question 1:
 What do if localStorage is not available?
 
-** Huge response: **
+**Huge response:**
 
 Make a complex model to retrieve and save data in a server-side or with a third party plugin, etc etc.
 
-** Light response: **
+**Light response:**
 
 IE7 is not worthy to my attention, so in that case use a volatile memory instead.
 
 ### Question 2:
 What if I need more than a storable object?
 
-** Huge response: **
+**Huge response:**
 
 Use IndexedDB with a complex wrapper and an alternative model for those browsers that not support IndexedDB... server-side or with a third party plugin, etc etc.
 
-** Light response: **
+**Light response:**
 
 Uff, why not use a simple localStorage with a prefix in each key? :)
 
